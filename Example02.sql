@@ -44,6 +44,7 @@ SELECT Employee_Name FROM Works WHERE Salary < 12000;
 SELECT Employee_Name, Company_Name FROM Works WHERE Salary = 12000;
 SELECT Employee_Name, Company_Name FROM Works WHERE Salary >= 12000;
 SELECT Employee_Name, Company_Name FROM Works WHERE Salary < 12000;
+
 SELECT E.Employee_Name, E.Street, E.City 
 FROM Employee E 
 JOIN Works W ON E.Employee_Name = W.Employee_Name 
