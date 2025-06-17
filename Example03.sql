@@ -98,7 +98,11 @@ JOIN Car C ON O.License = C.License
 WHERE C.Model = 'Alto';
 
 SELECT Driver FROM Accident WHERE Date = '2011-12-20';
-SELECT Driver FROM Log WHERE License = '12-4000';
+
+SELECT P.Name 
+FROM Person P
+JOIN Owns O ON P.NID = O.NID
+WHERE L.License = '12-4000';
 
 SELECT DISTINCT P.Name
 FROM Log L
