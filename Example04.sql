@@ -92,7 +92,7 @@ WHERE W.Company_Name != 'Sonali';
 SELECT W1.Employee_Name
 FROM Works W1
 WHERE W1.Salary > ALL (
-	SELECT W2.Salary
+    SELECT W2.Salary
     FROM Works W2
     WHERE W2.Company_Name = 'Janata'
 );
