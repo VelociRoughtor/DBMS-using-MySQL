@@ -158,7 +158,15 @@ WHERE Employee_Name IN (
     FROM Manages
 );
 
+DELETE FROM Works WHERE Company_Name = "Janata";
 
+CREATE VIEW Avg_Manager_Salary AS
+SELECT m.Manager_Name, AVG(w.Salary) AS Avg_Salary
+FROM Manages m
+JOIN Works w ON m.Employee_Name = w.Employee_Name
+GROUP BY m.Manager_Name;
+
+SELECT * FROM Avg_Manager_Salary;
 
 
 
