@@ -112,7 +112,6 @@ JOIN Log L ON A.Date = L.Date AND A.Driver = L.Driver
 JOIN Car C ON L.License = C.License
 WHERE A.Date = '2015-09-19';
 
-
 SELECT COUNT(*) AS AccidentCount
 FROM Log L 
 JOIN Owns O ON L.License = O.License
